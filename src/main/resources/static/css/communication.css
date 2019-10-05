@@ -1,0 +1,35 @@
+body{
+    background: #efefef url('image/bg.jpg');
+}
+.main{
+    margin: 36px;
+    background-color: white;
+}
+
+.btn-publish{
+    float: right;
+    margin-bottom: 15px;
+}
+
+.media-object{
+    width: 45px;
+    height: 45px;
+}
+.text-desc{
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}
+
+.profile .section{
+    margin-top: 10px;
+}
+
+.community-menu{
+    color: #999;
+    font-size: 12px;
+}
+.name{
+    margin-top: 15px;
+
+}
