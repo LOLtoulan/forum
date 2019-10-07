@@ -40,7 +40,6 @@ public class SessionInterceptor implements HandlerInterceptor {
                         request.getSession().setAttribute("user", users.get(0));
 
                     }
-                    System.out.println("users:--------->"+users);
                     break;
                 }
             }
