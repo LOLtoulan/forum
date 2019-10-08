@@ -4,6 +4,7 @@ import com.kude.communication.Exception.CustomizeErrorCode;
 import com.kude.communication.Exception.CustomizeException;
 import com.kude.communication.dto.PaginationDTO;
 import com.kude.communication.dto.QuestionDTO;
+import com.kude.communication.mapper.QuestionExtMapper;
 import com.kude.communication.mapper.QuestionMapper;
 import com.kude.communication.mapper.UserMapper;
 import com.kude.communication.model.Question;
@@ -28,6 +29,8 @@ public class QuestionService {
     private UserMapper userMapper;
     @Autowired
     private QuestionMapper questionMapper;
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
 
     public PaginationDTO selectList(Integer page, Integer size) {
         PaginationDTO paginationDTO = new PaginationDTO();
@@ -160,5 +163,13 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+
+    //增加阅读量
+    public void incView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }

@@ -1,7 +1,6 @@
 package com.kude.communication.controller;
 
 import com.kude.communication.dto.QuestionDTO;
-import com.kude.communication.mapper.QuestionMapper;
 import com.kude.communication.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,8 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class QuestionController {
 
-    @Autowired
-    private QuestionMapper questionMapper;
+
     @Autowired
     private QuestionService questionService;
 
@@ -26,6 +24,8 @@ public class QuestionController {
     public String question(@PathVariable(name = "id") Integer id,
                            Model model) {
         QuestionDTO questionDTO = questionService.getById(id);
+//        累加阅读数
+        questionService.incView(id);
         model.addAttribute("question", questionDTO);
         return "question";
     }
