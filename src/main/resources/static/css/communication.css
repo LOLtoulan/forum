@@ -75,3 +75,11 @@ body {
     margin-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
+
+.comment-sp{
+    margin-top: 0px;
+}
+
+.comment-top {
+    margin-top: 25px;
+}

@@ -1,6 +1,12 @@
 function post() {
     var questionId = $("#question_id").val();
     var content = $("#comment_content").val();
+
+    if (!content) {
+        alert("亲，回复内容不能为空呦(●ˇ∀ˇ●)");
+        return;
+    }
+
     $.ajax({
         type: "post",
         url:"/comment",
@@ -12,8 +18,10 @@ function post() {
         }),
         success:function (response) {
             if (response.code == 200) {
-                $("#comment_section").hide();
+                // $("#comment_section").hide();
+                window.location.reload();
             } else {
+
                 if (response.code == 2003) {
                     var isAccept = confirm(response.message);
                     if (isAccept) {
