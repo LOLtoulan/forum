@@ -18,7 +18,7 @@ import java.util.List;
  * @Message
  */
 @Service
-public class UserService {
+public class  UserService {
 
 
     @Autowired

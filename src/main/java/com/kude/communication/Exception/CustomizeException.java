@@ -1,5 +1,7 @@
 package com.kude.communication.Exception;
 
+import com.kude.communication.dto.ResultDTO;
+
 /**
  * @Author liyage LOL_toulan
  * @Time 2019/10/6 14:39
@@ -7,20 +9,23 @@ package com.kude.communication.Exception;
  */
 public class CustomizeException extends RuntimeException {
     private String message;
+    private Integer code;
 
-    public CustomizeException(CustomizeErrorCode errorCode) {
+    public CustomizeException(ICustomizeErrorCode errorCode) {
+        this.code = errorCode.getCode();
         this.message = errorCode.getMessage();
     }
 
-    public CustomizeException(String  message) {
 
-        this.message =message;
-    }
 
 
     @Override
     public String getMessage() {
         return message;
+    }
+
+    public Integer getCode() {
+        return code;
     }
 
 
