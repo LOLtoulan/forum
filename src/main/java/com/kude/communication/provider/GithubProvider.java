@@ -3,6 +3,7 @@ package com.kude.communication.provider;
 import com.alibaba.fastjson.JSON;
 import com.kude.communication.dto.AccessTokenDTO;
 import com.kude.communication.dto.GithubUser;
+import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import okhttp3.Request.Builder;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,7 @@ import java.io.IOException;
  * @Message
  */
 @Component
+@Slf4j
 public class GithubProvider {
     public String getAccessToken(AccessTokenDTO accessTokenDTO) {
         MediaType mediaType = MediaType.get("application/json; charset=utf-8");
@@ -33,7 +35,7 @@ public class GithubProvider {
             return token;
         } catch (Exception e) {
             e.printStackTrace();
-//            log.error("getAccessToken error,{}", accessTokenDTO, e);
+            log.error("getAccessToken error,{}", accessTokenDTO, e);
         }
         return null;
     }
@@ -51,7 +53,7 @@ public class GithubProvider {
             GithubUser githubUser = JSON.parseObject(string,GithubUser.class);
             return githubUser;
         } catch (IOException e) {
-//            e.printStackTrace();
+            log.error("getUser error,{}", accessToken, e);
         }
         return null;
 

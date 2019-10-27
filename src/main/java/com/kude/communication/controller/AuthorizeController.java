@@ -6,6 +6,7 @@ import com.kude.communication.mapper.UserMapper;
 import com.kude.communication.model.User;
 import com.kude.communication.provider.GithubProvider;
 import com.kude.communication.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,7 @@ import java.util.UUID;
  * @Message
  */
 @Controller
+@Slf4j
 public class AuthorizeController {
 
     @Autowired
@@ -69,6 +71,8 @@ public class AuthorizeController {
 //            request.getSession().setAttribute("githubUser",githubUser);
             return "redirect:/";
         } else {
+            log.error("callback get github error,{}", githubUser);
+            //登陆失败
             return "redirect:/";
         }
     }
