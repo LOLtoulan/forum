@@ -7519,3 +7519,17 @@ java.lang.Exception: null
 2019-10-27 20:37:47.783  INFO 12792 --- [Thread-12] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-10-27 20:37:47.784  INFO 12792 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2019-10-27 20:37:47.792  INFO 12792 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-27 20:37:50.518  INFO 12792 --- [restartedMain] c.k.c.CommunicationApplication           : Starting CommunicationApplication on 幼儿园扛把子 with PID 12792 (F:\TootleDevolpment\workspaces\communication\target\classes started by liyag in F:\TootleDevolpment\workspaces\communication)
+2019-10-27 20:37:50.519  INFO 12792 --- [restartedMain] c.k.c.CommunicationApplication           : No active profile set, falling back to default profiles: default
+2019-10-27 20:37:51.166  INFO 12792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-27 20:37:51.168  INFO 12792 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-27 20:37:51.168  INFO 12792 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-27 20:37:51.226  INFO 12792 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-27 20:37:51.226  INFO 12792 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 701 ms
+2019-10-27 20:37:51.567  INFO 12792 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-27 20:37:51.602  INFO 12792 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-27 20:37:51.707  INFO 12792 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-27 20:37:51.867  INFO 12792 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-27 20:37:51.901  INFO 12792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-27 20:37:51.902  INFO 12792 --- [restartedMain] c.k.c.CommunicationApplication           : Started CommunicationApplication in 1.445 seconds (JVM running for 1756.462)
+2019-10-27 20:37:51.907  INFO 12792 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
