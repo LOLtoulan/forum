@@ -26,7 +26,6 @@ public class  UserService {
 
 
     public void createOrUpdate(User user) {
-
         //当用户使用GitHub账号登陆时，因为account是唯一的，所以我们要从数据库中查询，以此来显示是新用户还是已登录过的用户
         UserExample userExample = new UserExample();
         userExample.createCriteria().andAccountIdEqualTo(user.getAccountId());

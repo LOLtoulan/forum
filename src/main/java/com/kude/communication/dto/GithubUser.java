@@ -7,6 +7,7 @@ import lombok.Data;
  * @Time 2019/8/19 16:27
  * @Message
  */
+
 @Data
 public class GithubUser {
 

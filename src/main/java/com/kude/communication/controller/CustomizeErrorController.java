@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Time 2019/10/7 17:48
  * @Message
  */
+
 @Controller
 @RequestMapping("${server.error.path:${error.path:/error}}")
 

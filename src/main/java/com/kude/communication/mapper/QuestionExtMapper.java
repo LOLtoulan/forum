@@ -1,6 +1,9 @@
 package com.kude.communication.mapper;
 
+import com.kude.communication.dto.QuestionQueryDTO;
 import com.kude.communication.model.Question;
+
+import java.util.List;
 
 /**
  * @Author liyage LOL_toulan
@@ -8,6 +11,14 @@ import com.kude.communication.model.Question;
  * @Message
  */
 public interface QuestionExtMapper {
+
     int incView(Question record);
-    int incCOmmentCount(Question record);
+
+    int incCommentCount(Question record);
+
+    List<Question> selectRelated(Question question);
+
+    Integer countBySearch(QuestionQueryDTO questionQueryDTO);
+
+    List<Question> selectBySearch(QuestionQueryDTO questionQueryDTO);
 }

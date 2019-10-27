@@ -5,6 +5,7 @@ package com.kude.communication.enums;
  * @Time 2019/10/9 15:13
  * @Message
  */
+
 public enum CommentTypeEnum {
     QUESTION(1),
     COMMENT(2);

@@ -7,6 +7,7 @@ import lombok.Data;
  * @Time 2019/8/18 18:55
  * @Message
  */
+
 @Data
 public class AccessTokenDTO {
 

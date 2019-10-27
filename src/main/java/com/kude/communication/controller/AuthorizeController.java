@@ -22,7 +22,6 @@ import java.util.UUID;
  * @Time 2019/8/18 18:22
  * @Message
  */
-
 @Controller
 public class AuthorizeController {
 
