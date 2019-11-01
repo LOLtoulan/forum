@@ -66,7 +66,7 @@ public class CommentService {
             // 增加评论数
             Comment parentComment = new Comment();
             parentComment.setId(comment.getParentId());
-            parentComment.setCommentCount(1L);
+            parentComment.setCommentCount(1);
             commentExtMapper.incCommentCount(parentComment);
 
 
@@ -78,9 +78,9 @@ public class CommentService {
             if (question == null) {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
-            comment.setCommentCount(0L);
+            comment.setCommentCount(0);
             commentMapper.insert(comment);
-            question.setCommentCount(1L);
+            question.setCommentCount(1);
             questionExtMapper.incCommentCount(question);
             createNotify(comment, question.getCreator(), commentator.getName(), question.getTitle(), NotificationTypeEnum.REPLY_QUESTION, question.getId());
 
